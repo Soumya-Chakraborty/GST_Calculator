@@ -6,7 +6,7 @@ setup(
     description='GST calculator with GUI using tkinter',
     author='Soumya Chakraborty',
     author_email='soumyachakraborty198181@gmail.com',
-    url='https://github.com/yourusername/gst_calculator',
+    url='https://github.com/SoumyaBtech/GST/tree/main',
     packages=find_packages(),
     install_requires=[
         'pandas',
