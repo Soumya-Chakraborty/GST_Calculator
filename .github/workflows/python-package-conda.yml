@@ -1,23 +1,24 @@
 name: Python Package using Conda
 
-on: [push]
+on:
+  push: {} # Trigger the workflow on push events
 
 jobs:
   build-linux:
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 5
+      max-parallel: 5 # Limit parallel jobs to 5
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v3 # Checkout the repository code
     - name: Set up Python 3.10
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v2 # Corrected to v2 since v3 does not exist
       with:
         python-version: '3.10'
     - name: Add conda to system path
       run: |
-        # $CONDA is an environment variable pointing to the root of the miniconda directory
-        echo $CONDA/bin >> $GITHUB_PATH
+        echo 'export PATH="$HOME/miniconda/bin:$PATH"' >> $HOME/.bashrc
+        source $HOME/.bashrc
     - name: Install dependencies
       run: |
         conda env update --file environment.yml --name base
