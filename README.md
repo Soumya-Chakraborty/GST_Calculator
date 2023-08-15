@@ -23,7 +23,7 @@ The GST Calculator is a simple application built using Python and Tkinter that e
 2. Navigate to the project directory:
 
 ```bash
-cd GST
+cd GST_Calculator
 ```
 
 3. Install the required dependencies:
