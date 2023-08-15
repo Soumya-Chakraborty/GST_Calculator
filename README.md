@@ -23,7 +23,7 @@ The GST Calculator is a simple application built using Python and Tkinter that a
 2. Navigate to the project directory:
 
 ```bash
-cd gst-calculator
+cd GST
 ```
 
 3. Install the required dependencies:
@@ -37,7 +37,7 @@ pip install -r requirements.txt
 1. Run the application:
 
 ```bash
-python gst_gui.py
+python main.py
 ```
 
 2. The GST Calculator GUI will open.
